@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2 id="detail"></h2>
+
+    <h1>ENTER THE INEDX VALUE</h1>
+    <input type="number" id="nm" />
+    <input type="submit" onclick="num()" />
+  </body>
+
+  <script>
+    
+    function num() {
+      let numbers = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100];
+
+      var a = parseInt(document.getElementById("nm").value);
+
+      console.log(numbers[a] || "please enter number in limit ");
+    }
+
+    let array = [20, 30, 40, 50, 60, 70, 80, 90];
+
+    console.log(array[2]);
+
+    const array2 = [1, 3, 5, 7, 9, 11, 13, 15, 17, 19];
+
+    console.log(array2[10] ?? "number dosen't match");
+
+    let carShowroom = {
+      name: "Audi",
+      model: "A4",
+      driveType: "All Wheel drive",
+      gearType: "Auto",
+    };
+    console.log(carShowroom.name);
+    console.log(carShowroom.driveType);
+    document.getElementById("detail").innerHTML =
+      "i have a one car this car that's from " +
+      carShowroom.name +
+      " i think it's model is " +
+      carShowroom.model +
+      " and this is " +
+      carShowroom.gearType +
+      " gear with the " +
+      carShowroom.driveType;
+
+    let hotelMenu = {
+      dish: "veg",
+      name: "samosa",
+      price: "20 INR",
+      type: "Oil fried",
+    };
+    console.log(
+      hotelMenu["name"] +
+        " is very famous in india, because it's price is only " +
+        hotelMenu["price"] +
+        " and it's a " +
+        hotelMenu["dish"] +
+        " dish"
+    );
+  </script>
+</html>
